@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - OACS | Demandez un devis</title>
+    <meta name="description" content="Contactez OACS pour vos projets IT, sécurité et défense. Téléphone: +229 01 94 94 50 50, Email: contact@outre-atlantique.com, Cotonou, Bénin.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/Logo OACS.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'oacs-primary': '#8B2B3E',
+                        'oacs-primary-dark': '#6B1F2E',
+                        'oacs-primary-light': '#A63D52',
+                        'oacs-black': '#1A1A1A',
+                        'oacs-dark-gray': '#2D2D2D',
+                        'oacs-medium-gray': '#737373',
+                        'oacs-light-gray': '#D4D4D4',
+                        'oacs-background': '#FAFAF9'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+<body class="font-inter bg-oacs-background text-oacs-black">
+    <!-- Top Bar -->
+    <div class="bg-oacs-black text-white py-2 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center sm:justify-between items-center">
+                <div class="hidden sm:flex space-x-6">
+                    <a href="tel:+2290194945050" class="hover:text-oacs-primary-light transition-colors duration-200">
+                        <i class="fas fa-phone mr-2"></i>+229 01 94 94 50 50
+                    </a>
+                    <a href="mailto:contact@outre-atlantique.com" class="hover:text-oacs-primary-light transition-colors duration-200">
+                        <i class="fas fa-envelope mr-2"></i>contact@outre-atlantique.com
+                    </a>
+                </div>
+                <div class="text-center sm:text-right">
+                    <span class="text-oacs-primary-light font-medium">Votre partenaire IT de confiance</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="./index.html" class="flex items-center space-x-3 group">
+                    <img src="assets/images/Logo OACS.png" alt="OACS Logo" class="h-12 w-12 object-contain group-hover:scale-105 transition-transform duration-200">
+                    <div>
+                        <div class="text-xl font-bold text-oacs-primary group-hover:text-oacs-primary-dark transition-colors duration-200">OACS</div>
+                        <div class="text-xs text-oacs-medium-gray hidden sm:block">Outre Atlantique Conseils et Services</div>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex space-x-8">
+                    <a href="./index.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Accueil</a>
+                    <a href="./apropos.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">À propos</a>
+                    <a href="./services.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Services</a>
+                    <a href="./solutions.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Solutions</a>
+                    <a href="./blog.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Blog</a>
+                    <a href="./contact.html" class="text-oacs-primary font-semibold border-b-2 border-oacs-primary pb-1">Contact</a>
+                </nav>
+                
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="./contact.html" class="bg-oacs-primary hover:bg-oacs-primary-dark text-white px-6 py-2 rounded-full font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg">
+                        Demander un devis
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-oacs-black hover:text-oacs-primary transition-colors duration-200" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden bg-white border-t border-gray-200 py-4" id="mobileMenu">
+                <nav class="flex flex-col space-y-4">
+                    <a href="./index.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Accueil</a>
+                    <a href="./apropos.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">À propos</a>
+                    <a href="./services.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Services</a>
+                    <a href="./solutions.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Solutions</a>
+                    <a href="./blog.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Blog</a>
+                    <a href="./contact.html" class="text-oacs-primary font-semibold px-4 py-2">Contact</a>
+                    <div class="px-4 pt-2">
+                        <a href="./contact.html" class="bg-oacs-primary hover:bg-oacs-primary-dark text-white px-6 py-2 rounded-full font-semibold transition-all duration-200 block text-center">
+                            Demander un devis
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-oacs-primary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">Contactez-nous</h1>
+            <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+                Prêt à démarrer votre projet ? Nos experts sont à votre disposition pour vous accompagner
+            </p>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12">
+                <!-- Contact Info -->
+                <div>
+                    <h2 class="text-3xl font-bold text-oacs-black mb-8">Nos coordonnées</h2>
+                    
+                    <div class="space-y-8">
+                        <!-- Phone -->
+                        <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border border-gray-100 group">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-oacs-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-oacs-black mb-1">Téléphone</h3>
+                                    <a href="tel:+2290194945050" class="text-oacs-primary hover:text-oacs-primary-dark transition-colors duration-200 text-lg font-medium">
+                                        +229 01 94 94 50 50
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Email -->
+                        <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border border-gray-100 group">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-oacs-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-oacs-black mb-1">Email</h3>
+                                    <a href="mailto:contact@outre-atlantique.com" class="text-oacs-primary hover:text-oacs-primary-dark transition-colors duration-200">
+                                        contact@outre-atlantique.com
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Address -->
+                        <div class="card-hover bg-white rounded-2xl p-6 shadow-lg border border-gray-100 group">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-oacs-primary rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-200">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-oacs-black mb-1">Adresse</h3>
+                                    <p class="text-oacs-medium-gray">Cotonou, Bénin</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Opening Hours -->
+                    <div class="mt-12 bg-oacs-background rounded-2xl p-8">
+                        <h3 class="text-xl font-semibold text-oacs-black mb-6">Horaires d'ouverture</h3>
+                        <div class="space-y-3">
+                            <div class="flex justify-between">
+                                <span class="text-oacs-medium-gray">Lundi - Vendredi</span>
+                                <span class="font-medium text-oacs-black">8h00 - 18h00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-oacs-medium-gray">Samedi</span>
+                                <span class="font-medium text-oacs-black">9h00 - 13h00</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-oacs-medium-gray">Dimanche</span>
+                                <span class="font-medium text-oacs-black">Fermé</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Form -->
+                <div>
+                    <h2 class="text-3xl font-bold text-oacs-black mb-8">Demandez un devis</h2>
+                    
+                    <form class="space-y-6" id="contactForm">
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="fullName" class="block text-sm font-medium text-oacs-black mb-2">Nom complet *</label>
+                                <input type="text" id="fullName" name="fullName" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-oacs-primary focus:border-oacs-primary transition-colors duration-200">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-oacs-black mb-2">Email *</label>
+                                <input type="email" id="email" name="email" required 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-oacs-primary focus:border-oacs-primary transition-colors duration-200">
+                            </div>
+                        </div>
+                        
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <label for="company" class="block text-sm font-medium text-oacs-black mb-2">Entreprise</label>
+                                <input type="text" id="company" name="company" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-oacs-primary focus:border-oacs-primary transition-colors duration-200">
+                            </div>
+                            <div>
+                                <label for="phone" class="block text-sm font-medium text-oacs-black mb-2">Téléphone</label>
+                                <input type="tel" id="phone" name="phone" 
+                                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-oacs-primary focus:border-oacs-primary transition-colors duration-200">
+                            </div>
+                        </div>
+                        
+                        <div>
+                            <label for="subject" class="block text-sm font-medium text-oacs-black mb-2">Sujet</label>
+                            <select id="subject" name="subject" 
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-oacs-primary focus:border-oacs-primary transition-colors duration-200">
+                                <option value="">Sélectionnez un sujet</option>
+                                <option value="devis">Demande de devis</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="support">Support technique</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                        </div>
+                        
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-oacs-black mb-2">Message *</label>
+                            <textarea id="message" name="message" rows="5" required 
+                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-oacs-primary focus:border-oacs-primary transition-colors duration-200"
+                                      placeholder="Décrivez votre projet ou vos besoins..."></textarea>
+                        </div>
+                        
+                        <button type="submit" 
+                                class="w-full bg-oacs-primary hover:bg-oacs-primary-dark text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-200 hover:scale-105 hover:shadow-lg">
+                            Envoyer le message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map Section -->
+    <section class="py-20 bg-oacs-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-oacs-black mb-4">Notre localisation</h2>
+                <p class="text-xl text-oacs-medium-gray">Trouvez-nous facilement à Cotonou</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden">
+                <div class="h-96 bg-gray-200 flex items-center justify-center">
+                    <div class="text-center">
+                        <i class="fas fa-map-marker-alt text-6xl text-oacs-primary mb-4"></i>
+                        <h3 class="text-xl font-semibold text-oacs-black mb-2">Cotonou, Bénin</h3>
+                        <p class="text-oacs-medium-gray">Carte interactive disponible prochainement</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-oacs-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="assets/images/Logo OACS.png" alt="OACS Logo" class="h-10 w-10 object-contain">
+                        <span class="text-xl font-bold text-oacs-primary">OACS</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Spécialiste en fourniture de matériel informatique, réseaux, sécurité, défense et surveillance depuis plus de 20 ans.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="text-gray-300 hover:text-white transition-colors duration-200">Accueil</a></li>
+                        <li><a href="./apropos.html" class="text-gray-300 hover:text-white transition-colors duration-200">À propos</a></li>
+                        <li><a href="./services.html" class="text-gray-300 hover:text-white transition-colors duration-200">Services</a></li>
+                        <li><a href="./solutions.html" class="text-gray-300 hover:text-white transition-colors duration-200">Solutions</a></li>
+                        <li><a href="./contact.html" class="text-gray-300 hover:text-white transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./services.html" class="text-gray-300 hover:text-white transition-colors duration-200">Matériel Informatique</a></li>
+                        <li><a href="./services.html" class="text-gray-300 hover:text-white transition-colors duration-200">Sécurité & Surveillance</a></li>
+                        <li><a href="./services.html" class="text-gray-300 hover:text-white transition-colors duration-200">Défense & Infrastructures</a></li>
+                        <li><a href="./services.html" class="text-gray-300 hover:text-white transition-colors duration-200">Réseaux IT</a></li>
+                        <li><a href="./solutions.html" class="text-gray-300 hover:text-white transition-colors duration-200">Centrale d'Achat</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <div class="space-y-3">
+                        <p class="text-gray-300">
+                            <i class="fas fa-phone mr-2 text-oacs-primary"></i>
+                            <a href="tel:+2290194945050" class="hover:text-white transition-colors duration-200">+229 01 94 94 50 50</a>
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-envelope mr-2 text-oacs-primary"></i>
+                            <a href="mailto:contact@outre-atlantique.com" class="hover:text-white transition-colors duration-200">contact@outre-atlantique.com</a>
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2 text-oacs-primary"></i>
+                            Cotonou, Bénin
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2024 OACS - Outre Atlantique Conseils et Services. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

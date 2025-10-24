@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>À propos - OACS | Outre Atlantique Conseils et Services</title>
+    <meta name="description" content="Découvrez l'histoire d'OACS, notre expertise de 20+ ans en informatique, sécurité et défense. Notre mission, nos valeurs et notre engagement.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="assets/images/Logo OACS.png">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'oacs-primary': '#8B2B3E',
+                        'oacs-primary-dark': '#6B1F2E',
+                        'oacs-primary-light': '#A63D52',
+                        'oacs-black': '#1A1A1A',
+                        'oacs-dark-gray': '#2D2D2D',
+                        'oacs-medium-gray': '#737373',
+                        'oacs-light-gray': '#D4D4D4',
+                        'oacs-background': '#FAFAF9'
+                    },
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/tailwind.css">
+</head>
+<body class="font-inter bg-oacs-background text-oacs-black">
+    <!-- Top Bar -->
+    <div class="bg-oacs-black text-white py-2 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center sm:justify-between items-center">
+                <div class="hidden sm:flex space-x-6">
+                    <a href="tel:+2290194945050" class="hover:text-oacs-primary-light transition-colors duration-200">
+                        <i class="fas fa-phone mr-2"></i>+229 01 94 94 50 50
+                    </a>
+                    <a href="mailto:contact@outre-atlantique.com" class="hover:text-oacs-primary-light transition-colors duration-200">
+                        <i class="fas fa-envelope mr-2"></i>contact@outre-atlantique.com
+                    </a>
+                </div>
+                <div class="text-center sm:text-right">
+                    <span class="text-oacs-primary-light font-medium">Votre partenaire IT de confiance</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-lg sticky top-0 z-50 transition-all duration-300" id="header">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <a href="./index.html" class="flex items-center space-x-3 group">
+                    <img src="assets/images/Logo OACS.png" alt="OACS Logo" class="h-12 w-12 object-contain group-hover:scale-105 transition-transform duration-200">
+                    <div>
+                        <div class="text-xl font-bold text-oacs-primary group-hover:text-oacs-primary-dark transition-colors duration-200">OACS</div>
+                        <div class="text-xs text-oacs-medium-gray hidden sm:block">Outre Atlantique Conseils et Services</div>
+                    </div>
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden lg:flex space-x-8">
+                    <a href="./index.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Accueil</a>
+                    <a href="./apropos.html" class="text-oacs-primary font-semibold border-b-2 border-oacs-primary pb-1">À propos</a>
+                    <a href="./services.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Services</a>
+                    <a href="./solutions.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Solutions</a>
+                    <a href="./blog.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Blog</a>
+                    <a href="./contact.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Contact</a>
+                </nav>
+                
+                <!-- CTA Button -->
+                <div class="hidden lg:block">
+                    <a href="./contact.html" class="bg-oacs-primary hover:bg-oacs-primary-dark text-white px-6 py-2 rounded-full font-semibold transition-all duration-200 hover:scale-105 hover:shadow-lg">
+                        Demander un devis
+                    </a>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="lg:hidden text-oacs-black hover:text-oacs-primary transition-colors duration-200" id="mobileMenuBtn">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+            
+            <!-- Mobile Menu -->
+            <div class="lg:hidden hidden bg-white border-t border-gray-200 py-4" id="mobileMenu">
+                <nav class="flex flex-col space-y-4">
+                    <a href="./index.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Accueil</a>
+                    <a href="./apropos.html" class="text-oacs-primary font-semibold px-4 py-2">À propos</a>
+                    <a href="./services.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Services</a>
+                    <a href="./solutions.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Solutions</a>
+                    <a href="./blog.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Blog</a>
+                    <a href="./contact.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Contact</a>
+                    <div class="px-4 pt-2">
+                        <a href="./contact.html" class="bg-oacs-primary hover:bg-oacs-primary-dark text-white px-6 py-2 rounded-full font-semibold transition-all duration-200 block text-center">
+                            Demander un devis
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-oacs-primary text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">À propos d'OACS</h1>
+            <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+                Plus de 20 ans d'expertise au service de vos projets IT, sécurité et défense
+            </p>
+        </div>
+    </section>
+
+    <!-- Who We Are Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl font-bold text-oacs-black mb-6">Qui sommes-nous ?</h2>
+                    <div class="space-y-6 text-lg text-oacs-medium-gray leading-relaxed">
+                        <p>
+                            <strong class="text-oacs-primary">OACS - Outre Atlantique Conseils et Services</strong> est une entreprise spécialisée dans la fourniture de matériel informatique, réseaux, sécurité, défense et surveillance depuis plus de 20 ans.
+                        </p>
+                        <p>
+                            Forte de notre expertise reconnue et de notre réseau international de partenaires, nous accompagnons les organisations dans la réalisation de leurs projets les plus critiques et exigeants.
+                        </p>
+                        <p>
+                            Notre engagement : vous fournir des solutions sur-mesure, conformes aux normes les plus strictes, avec un service client exceptionnel et une réactivité à toute épreuve.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-6">
+                    <div class="bg-oacs-primary text-white rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold mb-2">20+</div>
+                        <div class="text-sm opacity-90">Années d'expérience</div>
+                    </div>
+                    <div class="bg-oacs-primary text-white rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold mb-2">500+</div>
+                        <div class="text-sm opacity-90">Clients satisfaits</div>
+                    </div>
+                    <div class="bg-oacs-primary text-white rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold mb-2">1000+</div>
+                        <div class="text-sm opacity-90">Projets réalisés</div>
+                    </div>
+                    <div class="bg-oacs-primary text-white rounded-2xl p-6 text-center">
+                        <div class="text-3xl font-bold mb-2">15+</div>
+                        <div class="text-sm opacity-90">Pays couverts</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="py-20 bg-oacs-background">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-oacs-black mb-4">Notre parcours</h2>
+                <p class="text-xl text-oacs-medium-gray max-w-3xl mx-auto">
+                    Une évolution constante au service de l'excellence
+                </p>
+            </div>
+            
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-oacs-primary"></div>
+                
+                <div class="space-y-12">
+                    <!-- 2003 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                                <div class="text-oacs-primary font-bold text-lg mb-2">2003</div>
+                                <h3 class="text-xl font-semibold text-oacs-black mb-3">Fondation</h3>
+                                <p class="text-oacs-medium-gray">
+                                    Création d'OACS avec une vision claire : devenir le partenaire de référence en solutions IT et sécurité au Bénin.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-oacs-primary rounded-full border-4 border-white shadow-lg"></div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    
+                    <!-- 2010 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-oacs-primary rounded-full border-4 border-white shadow-lg"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                                <div class="text-oacs-primary font-bold text-lg mb-2">2010</div>
+                                <h3 class="text-xl font-semibold text-oacs-black mb-3">Agrandissement</h3>
+                                <p class="text-oacs-medium-gray">
+                                    Expansion de nos activités et développement de notre réseau de partenaires internationaux.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 2015 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8 text-right">
+                            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                                <div class="text-oacs-primary font-bold text-lg mb-2">2015</div>
+                                <h3 class="text-xl font-semibold text-oacs-black mb-3">Reconnaissance</h3>
+                                <p class="text-oacs-medium-gray">
+                                    Certification et reconnaissance officielle de notre expertise par les plus grandes marques du secteur.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-oacs-primary rounded-full border-4 border-white shadow-lg"></div>
+                        <div class="w-1/2 pl-8"></div>
+                    </div>
+                    
+                    <!-- 2024 -->
+                    <div class="relative flex items-center">
+                        <div class="w-1/2 pr-8"></div>
+                        <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 bg-oacs-primary rounded-full border-4 border-white shadow-lg"></div>
+                        <div class="w-1/2 pl-8">
+                            <div class="bg-white rounded-2xl p-8 shadow-lg">
+                                <div class="text-oacs-primary font-bold text-lg mb-2">2024</div>
+                                <h3 class="text-xl font-semibold text-oacs-black mb-3">Innovation</h3>
+                                <p class="text-oacs-medium-gray">
+                                    Lancement de nouvelles solutions digitales et renforcement de notre position de leader régional.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold text-oacs-black mb-4">Nos valeurs</h2>
+                <p class="text-xl text-oacs-medium-gray max-w-3xl mx-auto">
+                    Les principes qui guident notre action au quotidien
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <article class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
+                        <i class="fas fa-graduation-cap text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-oacs-black mb-4 group-hover:text-oacs-primary transition-colors duration-200">Expertise Reconnue</h3>
+                    <p class="text-oacs-medium-gray leading-relaxed">
+                        Formation continue et maîtrise des dernières technologies pour vous offrir les meilleures solutions.
+                    </p>
+                </article>
+                
+                <article class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
+                        <i class="fas fa-handshake text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-oacs-black mb-4 group-hover:text-oacs-primary transition-colors duration-200">Réactivité et Transparence</h3>
+                    <p class="text-oacs-medium-gray leading-relaxed">
+                        Communication claire et délais respectés pour une collaboration sereine et efficace.
+                    </p>
+                </article>
+                
+                <article class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
+                        <i class="fas fa-globe text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-oacs-black mb-4 group-hover:text-oacs-primary transition-colors duration-200">Réseau International</h3>
+                    <p class="text-oacs-medium-gray leading-relaxed">
+                        Partenaires stratégiques dans le monde entier pour des solutions globales et innovantes.
+                    </p>
+                </article>
+                
+                <article class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group">
+                    <div class="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-200">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold text-oacs-black mb-4 group-hover:text-oacs-primary transition-colors duration-200">Normes de Conformité</h3>
+                    <p class="text-oacs-medium-gray leading-relaxed">
+                        Respect strict des réglementations et certifications pour garantir la sécurité de vos projets.
+                    </p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 bg-oacs-black text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="max-w-4xl mx-auto">
+                <div class="w-20 h-20 bg-oacs-primary rounded-full flex items-center justify-center mx-auto mb-8">
+                    <i class="fas fa-handshake text-white text-3xl"></i>
+                </div>
+                <h2 class="text-4xl font-bold mb-6">Notre mission</h2>
+                <p class="text-xl text-gray-200 leading-relaxed">
+                    Accompagner nos clients dans la réussite de leurs projets les plus ambitieux en leur fournissant des solutions IT, de sécurité et de défense de pointe, adaptées à leurs besoins spécifiques et conformes aux plus hauts standards de qualité.
+                </p>
+                <div class="mt-8">
+                    <a href="./contact.html" class="bg-oacs-primary hover:bg-oacs-primary-dark text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-200 hover:scale-105 hover:shadow-xl inline-block">
+                        Rejoignez-nous
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-oacs-black text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <div class="flex items-center space-x-3 mb-6">
+                        <img src="assets/images/Logo OACS.png" alt="OACS Logo" class="h-10 w-10 object-contain">
+                        <span class="text-xl font-bold text-oacs-primary">OACS</span>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed">
+                        Spécialiste en fourniture de matériel informatique, réseaux, sécurité, défense et surveillance depuis plus de 20 ans.
+                    </p>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Navigation</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./index.html" class="text-gray-300 hover:text-white transition-colors duration-200">Accueil</a></li>
+                        <li><a href="./apropos.html" class="text-gray-300 hover:text-white transition-colors duration-200">À propos</a></li>
+                        <li><a href="./services.html" class="text-gray-300 hover:text-white transition-colors duration-200">Services</a></li>
+                        <li><a href="./solutions.html" class="text-gray-300 hover:text-white transition-colors duration-200">Solutions</a></li>
+                        <li><a href="./contact.html" class="text-gray-300 hover:text-white transition-colors duration-200">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Services</h3>
+                    <ul class="space-y-2">
+                        <li><a href="./services.html" class="text-gray-300 hover:text-white transition-colors duration-200">Matériel Informatique</a></li>
+                        <li><a href="./services.html" class="text-gray-300 hover:text-white transition-colors duration-200">Sécurité & Surveillance</a></li>
+                        <li><a href="./services.html" class="text-gray-300 hover:text-white transition-colors duration-200">Défense & Infrastructures</a></li>
+                        <li><a href="./services.html" class="text-gray-300 hover:text-white transition-colors duration-200">Réseaux IT</a></li>
+                        <li><a href="./solutions.html" class="text-gray-300 hover:text-white transition-colors duration-200">Centrale d'Achat</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-semibold mb-4">Contact</h3>
+                    <div class="space-y-3">
+                        <p class="text-gray-300">
+                            <i class="fas fa-phone mr-2 text-oacs-primary"></i>
+                            <a href="tel:+2290194945050" class="hover:text-white transition-colors duration-200">+229 01 94 94 50 50</a>
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-envelope mr-2 text-oacs-primary"></i>
+                            <a href="mailto:contact@outre-atlantique.com" class="hover:text-white transition-colors duration-200">contact@outre-atlantique.com</a>
+                        </p>
+                        <p class="text-gray-300">
+                            <i class="fas fa-map-marker-alt mr-2 text-oacs-primary"></i>
+                            Cotonou, Bénin
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-gray-400">
+                    &copy; 2024 OACS - Outre Atlantique Conseils et Services. Tous droits réservés.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
