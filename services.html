@@ -74,7 +74,6 @@
                     <a href="./apropos.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">À propos</a>
                     <a href="./services.html" class="text-oacs-primary font-semibold border-b-2 border-oacs-primary pb-1">Services</a>
                     <a href="./solutions.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Solutions</a>
-                    <a href="./blog.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Blog</a>
                     <a href="./contact.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 font-medium">Contact</a>
                 </nav>
                 
@@ -98,7 +97,6 @@
                     <a href="./apropos.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">À propos</a>
                     <a href="./services.html" class="text-oacs-primary font-semibold px-4 py-2">Services</a>
                     <a href="./solutions.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Solutions</a>
-                    <a href="./blog.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Blog</a>
                     <a href="./contact.html" class="text-oacs-black hover:text-oacs-primary transition-colors duration-200 px-4 py-2">Contact</a>
                     <div class="px-4 pt-2">
                         <a href="./contact.html" class="bg-oacs-primary hover:bg-oacs-primary-dark text-white px-6 py-2 rounded-full font-semibold transition-all duration-200 block text-center">
@@ -255,7 +253,7 @@
     </section>
 
     <!-- Associated Services Section -->
-    <section class="py-20 bg-oacs-background">
+    <section class="py-20 bg-gradient-to-b from-gray-50 to-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <h2 class="text-4xl font-bold text-oacs-black mb-4">Prestations associées</h2>
@@ -265,80 +263,114 @@
             </div>
             
             <div class="grid md:grid-cols-3 gap-8">
-                <article class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group text-center">
-                    <div class="w-20 h-20 bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                        <i class="fas fa-tools text-white text-3xl"></i>
+                <!-- Service 1 -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-orange-500 to-orange-700 p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 text-center">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-16 -mt-16"></div>
+                    <div class="relative z-10">
+                        <div class="w-20 h-20 bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-tools text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Maintenance et Support</h3>
+                        <p class="text-orange-100 leading-relaxed">
+                            Service après-vente complet avec maintenance préventive et corrective pour garantir la performance de vos équipements.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-oacs-black mb-4 group-hover:text-oacs-primary transition-colors duration-200">Maintenance et Support</h3>
-                    <p class="text-oacs-medium-gray leading-relaxed">
-                        Service après-vente complet avec maintenance préventive et corrective pour garantir la performance de vos équipements.
-                    </p>
-                </article>
+                </div>
                 
-                <article class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group text-center">
-                    <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                        <i class="fas fa-rocket text-white text-3xl"></i>
+                <!-- Service 2 -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-blue-500 to-blue-700 p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 text-center">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-16 -mt-16"></div>
+                    <div class="relative z-10">
+                        <div class="w-20 h-20 bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-rocket text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Déploiement</h3>
+                        <p class="text-blue-100 leading-relaxed">
+                            Installation et mise en service de vos équipements par nos techniciens certifiés, sur site ou à distance.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-oacs-black mb-4 group-hover:text-oacs-primary transition-colors duration-200">Déploiement</h3>
-                    <p class="text-oacs-medium-gray leading-relaxed">
-                        Installation et mise en service de vos équipements par nos techniciens certifiés, sur site ou à distance.
-                    </p>
-                </article>
+                </div>
                 
-                <article class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100 group text-center">
-                    <div class="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 group-hover:scale-110 transition-transform duration-200">
-                        <i class="fas fa-cogs text-white text-3xl"></i>
+                <!-- Service 3 -->
+                <div class="group relative overflow-hidden rounded-3xl bg-gradient-to-br from-green-500 to-green-700 p-10 shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 text-center">
+                    <div class="absolute top-0 right-0 w-32 h-32 bg-white opacity-10 rounded-full -mr-16 -mt-16"></div>
+                    <div class="relative z-10">
+                        <div class="w-20 h-20 bg-white bg-opacity-20 backdrop-blur-sm rounded-2xl flex items-center justify-center mx-auto mb-6">
+                            <i class="fas fa-cogs text-white text-3xl"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Configuration</h3>
+                        <p class="text-green-100 leading-relaxed">
+                            Paramétrage personnalisé de vos équipements selon vos besoins spécifiques et vos contraintes techniques.
+                        </p>
                     </div>
-                    <h3 class="text-xl font-semibold text-oacs-black mb-4 group-hover:text-oacs-primary transition-colors duration-200">Configuration</h3>
-                    <p class="text-oacs-medium-gray leading-relaxed">
-                        Paramétrage personnalisé de vos équipements selon vos besoins spécifiques et vos contraintes techniques.
-                    </p>
-                </article>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Our Approach Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section class="py-20 bg-gradient-to-br from-oacs-primary to-oacs-primary-dark text-white relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute top-0 left-0 w-96 h-96 bg-white opacity-5 rounded-full -ml-48 -mt-48"></div>
+        <div class="absolute bottom-0 right-0 w-96 h-96 bg-white opacity-5 rounded-full -mr-48 -mb-48"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold text-oacs-black mb-4">Notre approche</h2>
-                <p class="text-xl text-oacs-medium-gray max-w-3xl mx-auto">
+                <h2 class="text-4xl font-bold text-white mb-4">Notre approche</h2>
+                <p class="text-xl text-gray-200 max-w-3xl mx-auto">
                     Une méthodologie éprouvée en 4 étapes pour garantir le succès de vos projets
                 </p>
             </div>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-oacs-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">1</div>
-                    <h3 class="text-xl font-semibold text-oacs-black mb-4">Analyser</h3>
-                    <p class="text-oacs-medium-gray leading-relaxed">
-                        Étude approfondie de vos besoins, contraintes et objectifs pour définir la solution optimale.
-                    </p>
+                <!-- Step 1 -->
+                <div class="relative group">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white text-oacs-primary rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">1</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Analyser</h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            Étude approfondie de vos besoins, contraintes et objectifs pour définir la solution optimale.
+                        </p>
+                    </div>
+                    <!-- Arrow -->
+                    <div class="hidden lg:block absolute top-10 -right-4 text-white text-3xl opacity-50">→</div>
                 </div>
                 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-oacs-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">2</div>
-                    <h3 class="text-xl font-semibold text-oacs-black mb-4">Proposer</h3>
-                    <p class="text-oacs-medium-gray leading-relaxed">
-                        Élaboration d'une solution sur-mesure avec devis détaillé et planning de réalisation.
-                    </p>
+                <!-- Step 2 -->
+                <div class="relative group">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white text-oacs-primary rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">2</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Proposer</h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            Élaboration d'une solution sur-mesure avec devis détaillé et planning de réalisation.
+                        </p>
+                    </div>
+                    <!-- Arrow -->
+                    <div class="hidden lg:block absolute top-10 -right-4 text-white text-3xl opacity-50">→</div>
                 </div>
                 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-oacs-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">3</div>
-                    <h3 class="text-xl font-semibold text-oacs-black mb-4">Déployer</h3>
-                    <p class="text-oacs-medium-gray leading-relaxed">
-                        Installation, configuration et mise en service par nos équipes techniques certifiées.
-                    </p>
+                <!-- Step 3 -->
+                <div class="relative group">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white text-oacs-primary rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">3</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Déployer</h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            Installation, configuration et mise en service par nos équipes techniques certifiées.
+                        </p>
+                    </div>
+                    <!-- Arrow -->
+                    <div class="hidden lg:block absolute top-10 -right-4 text-white text-3xl opacity-50">→</div>
                 </div>
                 
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-oacs-primary text-white rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold">4</div>
-                    <h3 class="text-xl font-semibold text-oacs-black mb-4">Soutenir</h3>
-                    <p class="text-oacs-medium-gray leading-relaxed">
-                        Accompagnement continu avec maintenance, formation et support technique réactif.
-                    </p>
+                <!-- Step 4 -->
+                <div class="group">
+                    <div class="text-center">
+                        <div class="w-20 h-20 bg-white text-oacs-primary rounded-full flex items-center justify-center mx-auto mb-6 text-3xl font-bold shadow-lg group-hover:scale-110 transition-transform duration-300">4</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Soutenir</h3>
+                        <p class="text-gray-200 leading-relaxed">
+                            Accompagnement continu avec maintenance, formation et support technique réactif.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
