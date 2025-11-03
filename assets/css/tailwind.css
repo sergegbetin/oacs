@@ -155,3 +155,346 @@
     transition-duration: 0.01ms !important;
   }
 }
+
+/* ========================================
+   RESPONSIVE DESIGN - BREAKPOINTS PERSONNALISÉS
+   ======================================== */
+
+/* 📱 Mobile Portrait (320px - 480px) */
+@media (min-width: 320px) and (max-width: 480px) {
+  /* Typography */
+  h1 { font-size: 1.875rem !important; line-height: 2.25rem !important; } /* 30px */
+  h2 { font-size: 1.5rem !important; line-height: 2rem !important; } /* 24px */
+  h3 { font-size: 1.25rem !important; line-height: 1.75rem !important; } /* 20px */
+  p { font-size: 0.875rem !important; line-height: 1.5rem !important; } /* 14px */
+  
+  /* Container */
+  .max-w-7xl { padding-left: 1rem !important; padding-right: 1rem !important; }
+  
+  /* Navigation */
+  .mobile-menu { display: block !important; }
+  .desktop-menu { display: none !important; }
+  
+  /* Hero Section */
+  .hero-title { font-size: 2rem !important; line-height: 2.5rem !important; }
+  .hero-subtitle { font-size: 1rem !important; }
+  
+  /* Cards */
+  .card-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+  
+  /* Images */
+  .hero-image { height: 200px !important; object-fit: cover !important; }
+  
+  /* Buttons */
+  .btn { padding: 0.75rem 1.5rem !important; font-size: 0.875rem !important; }
+  
+  /* Spacing */
+  .section-padding { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+  
+  /* Hide on mobile */
+  .hide-mobile { display: none !important; }
+}
+
+/* 📱 Mobile Landscape (481px - 767px) */
+@media (min-width: 481px) and (max-width: 767px) {
+  /* Typography */
+  h1 { font-size: 2.25rem !important; line-height: 2.5rem !important; } /* 36px */
+  h2 { font-size: 1.875rem !important; line-height: 2.25rem !important; } /* 30px */
+  h3 { font-size: 1.5rem !important; line-height: 2rem !important; } /* 24px */
+  
+  /* Container */
+  .max-w-7xl { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
+  
+  /* Cards */
+  .card-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 1.5rem !important; }
+  
+  /* Hero Section */
+  .hero-title { font-size: 2.5rem !important; }
+  
+  /* Images */
+  .hero-image { height: 250px !important; }
+  
+  /* Spacing */
+  .section-padding { padding-top: 4rem !important; padding-bottom: 4rem !important; }
+}
+
+/* 📱 Tablet Portrait (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  /* Typography */
+  h1 { font-size: 3rem !important; line-height: 1.2 !important; } /* 48px */
+  h2 { font-size: 2.25rem !important; line-height: 2.5rem !important; } /* 36px */
+  h3 { font-size: 1.875rem !important; line-height: 2.25rem !important; } /* 30px */
+  
+  /* Container */
+  .max-w-7xl { padding-left: 2rem !important; padding-right: 2rem !important; }
+  
+  /* Navigation */
+  .desktop-menu { display: flex !important; }
+  
+  /* Cards */
+  .card-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem !important; }
+  
+  /* Hero Section */
+  .hero-title { font-size: 3rem !important; }
+  .hero-grid { grid-template-columns: 1fr !important; }
+  
+  /* Images */
+  .hero-image { height: 300px !important; }
+  
+  /* Spacing */
+  .section-padding { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+  
+  /* Show on tablet */
+  .show-tablet { display: block !important; }
+}
+
+/* 📱 Tablet Landscape (768px - 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  /* Typography */
+  h1 { font-size: 3.5rem !important; } /* 56px */
+  h2 { font-size: 2.5rem !important; } /* 40px */
+  
+  /* Cards */
+  .card-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 1.5rem !important; }
+  
+  /* Hero Section */
+  .hero-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2rem !important; }
+  
+  /* Images */
+  .hero-image { height: 350px !important; }
+  
+  /* Navigation */
+  .nav-links { gap: 1.5rem !important; }
+}
+
+/* 💻 Laptop/Desktop (1025px - 1280px) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+  /* Typography */
+  h1 { font-size: 3.75rem !important; line-height: 1.1 !important; } /* 60px */
+  h2 { font-size: 2.5rem !important; } /* 40px */
+  h3 { font-size: 2rem !important; } /* 32px */
+  
+  /* Container */
+  .max-w-7xl { max-width: 1200px !important; padding-left: 2rem !important; padding-right: 2rem !important; }
+  
+  /* Cards */
+  .card-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 2rem !important; }
+  .card-grid-4 { grid-template-columns: repeat(4, 1fr) !important; }
+  
+  /* Hero Section */
+  .hero-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 3rem !important; }
+  .hero-title { font-size: 3.75rem !important; }
+  
+  /* Images */
+  .hero-image { height: 400px !important; }
+  
+  /* Spacing */
+  .section-padding { padding-top: 5rem !important; padding-bottom: 5rem !important; }
+  
+  /* Navigation */
+  .nav-links { gap: 2rem !important; }
+}
+
+/* 🖥️ Large Desktop (1281px+) */
+@media (min-width: 1281px) {
+  /* Typography */
+  h1 { font-size: 4rem !important; line-height: 1.1 !important; } /* 64px */
+  h2 { font-size: 3rem !important; } /* 48px */
+  h3 { font-size: 2.25rem !important; } /* 36px */
+  
+  /* Container */
+  .max-w-7xl { max-width: 1280px !important; }
+  
+  /* Cards */
+  .card-grid { grid-template-columns: repeat(4, 1fr) !important; gap: 2.5rem !important; }
+  
+  /* Hero Section */
+  .hero-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 4rem !important; }
+  .hero-title { font-size: 4rem !important; }
+  
+  /* Images */
+  .hero-image { height: 500px !important; }
+  
+  /* Spacing */
+  .section-padding { padding-top: 6rem !important; padding-bottom: 6rem !important; }
+  
+  /* Show on large screens */
+  .show-desktop { display: block !important; }
+}
+
+/* ========================================
+   UTILITY CLASSES RESPONSIVE
+   ======================================== */
+
+/* Hide/Show Classes */
+.hide-mobile { display: block; }
+.show-mobile { display: none; }
+.hide-tablet { display: block; }
+.show-tablet { display: none; }
+.hide-desktop { display: block; }
+.show-desktop { display: none; }
+
+@media (max-width: 767px) {
+  .show-mobile { display: block !important; }
+  .hide-mobile { display: none !important; }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .show-tablet { display: block !important; }
+  .hide-tablet { display: none !important; }
+}
+
+@media (min-width: 1025px) {
+  .show-desktop { display: block !important; }
+  .hide-desktop { display: none !important; }
+}
+
+/* ========================================
+   RESPONSIVE NAVIGATION
+   ======================================== */
+
+@media (max-width: 1024px) {
+  /* Mobile Menu Toggle */
+  .mobile-menu-button { display: block !important; }
+  
+  /* Mobile Menu */
+  .mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 80%;
+    max-width: 320px;
+    height: 100vh;
+    background: white;
+    box-shadow: 2px 0 10px rgba(0,0,0,0.1);
+    transition: left 0.3s ease;
+    z-index: 1000;
+    overflow-y: auto;
+  }
+  
+  .mobile-nav.active {
+    left: 0;
+  }
+  
+  .mobile-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+  }
+  
+  .mobile-overlay.active {
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* ========================================
+   RESPONSIVE IMAGES
+   ======================================== */
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.responsive-img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ========================================
+   RESPONSIVE TABLES
+   ======================================== */
+
+@media (max-width: 767px) {
+  table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  
+  .table-responsive {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+/* ========================================
+   RESPONSIVE FORMS
+   ======================================== */
+
+@media (max-width: 767px) {
+  input, textarea, select {
+    font-size: 16px !important; /* Évite le zoom sur iOS */
+  }
+  
+  .form-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+/* ========================================
+   RESPONSIVE GRID SYSTEM
+   ======================================== */
+
+.grid-responsive {
+  display: grid;
+  gap: 1.5rem;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .grid-responsive { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .grid-responsive { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .grid-responsive { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (min-width: 1025px) {
+  .grid-responsive { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ========================================
+   RESPONSIVE SPACING
+   ======================================== */
+
+.responsive-padding {
+  padding: 1rem;
+}
+
+@media (min-width: 481px) {
+  .responsive-padding { padding: 1.5rem; }
+}
+
+@media (min-width: 768px) {
+  .responsive-padding { padding: 2rem; }
+}
+
+@media (min-width: 1025px) {
+  .responsive-padding { padding: 3rem; }
+}
+
+/* ========================================
+   RESPONSIVE TEXT ALIGNMENT
+   ======================================== */
+
+.text-responsive-center {
+  text-align: center;
+}
+
+@media (min-width: 1025px) {
+  .text-responsive-center { text-align: left; }
+}
