@@ -13,6 +13,7 @@ class OACSSite {
         this.setupAnimations();
         this.setupSmoothScroll();
         this.setupFormHandling();
+        this.setupCounterAnimation();
     }
 
     // Mobile Menu Toggle
@@ -20,29 +21,35 @@ class OACSSite {
         const mobileMenuBtn = document.getElementById('mobileMenuBtn');
         const mobileMenu = document.getElementById('mobileMenu');
         
-        if (mobileMenuBtn && mobileMenu) {
-            mobileMenuBtn.addEventListener('click', () => {
-                mobileMenu.classList.toggle('hidden');
-                const icon = mobileMenuBtn.querySelector('i');
+        if (!mobileMenuBtn || !mobileMenu) return;
+
+        const icon = mobileMenuBtn.querySelector('i');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            if (icon) {
                 icon.classList.toggle('fa-bars');
                 icon.classList.toggle('fa-times');
-            });
+            }
+        });
 
-            // Close menu when clicking outside
-            document.addEventListener('click', (e) => {
-                if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
-                    mobileMenu.classList.add('hidden');
-                    const icon = mobileMenuBtn.querySelector('i');
+        // Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!mobileMenuBtn.contains(e.target) && !mobileMenu.contains(e.target)) {
+                mobileMenu.classList.add('hidden');
+                if (icon) {
                     icon.classList.add('fa-bars');
                     icon.classList.remove('fa-times');
                 }
-            });
-        }
+            }
+        });
     }
 
     // Header Scroll Effects
     setupScrollEffects() {
         const header = document.getElementById('header');
+        if (!header) return;
+
         let lastScrollY = window.scrollY;
         let ticking = false;
 
@@ -50,21 +57,13 @@ class OACSSite {
             const currentScrollY = window.scrollY;
             
             if (currentScrollY > 100) {
-                header.classList.add('shadow-2xl');
-                header.classList.add('backdrop-blur-md');
-                header.classList.add('bg-white/95');
+                header.classList.add('shadow-2xl', 'backdrop-blur-md', 'bg-white/95');
             } else {
-                header.classList.remove('shadow-2xl');
-                header.classList.remove('backdrop-blur-md');
-                header.classList.remove('bg-white/95');
+                header.classList.remove('shadow-2xl', 'backdrop-blur-md', 'bg-white/95');
             }
 
-            // Hide/show header on scroll
-            if (currentScrollY > lastScrollY && currentScrollY > 200) {
-                header.style.transform = 'translateY(-100%)';
-            } else {
-                header.style.transform = 'translateY(0)';
-            }
+            // Keep header always visible - removed hide/show on scroll
+            // header.style.transform = 'translateY(0)';
 
             lastScrollY = currentScrollY;
             ticking = false;
@@ -86,8 +85,29 @@ class OACSSite {
         const statDots = document.querySelectorAll('.stat-dot');
         let currentIndex = 0;
         let intervalId;
+        let hasAnimatedCounters = false;
 
         if (statCards.length === 0) return;
+
+        const animateCounter = (counter) => {
+            const target = parseInt(counter.textContent.replace(/\D/g, ''));
+            const suffix = counter.textContent.replace(/[0-9]/g, '');
+            const duration = 1500;
+            const increment = target / (duration / 16);
+            let current = 0;
+
+            const updateCounter = () => {
+                current += increment;
+                if (current < target) {
+                    counter.textContent = Math.floor(current) + suffix;
+                    requestAnimationFrame(updateCounter);
+                } else {
+                    counter.textContent = target + suffix;
+                }
+            };
+
+            updateCounter();
+        };
 
         const showStat = (index) => {
             // Hide all cards
@@ -95,6 +115,14 @@ class OACSSite {
                 card.classList.remove('active');
                 if (i === index) {
                     card.classList.add('active');
+                    
+                    // Animate counter when card becomes active
+                    if (!hasAnimatedCounters) {
+                        const counter = card.querySelector('.text-4xl');
+                        if (counter) {
+                            setTimeout(() => animateCounter(counter), 300);
+                        }
+                    }
                 }
             });
 
@@ -107,10 +135,15 @@ class OACSSite {
         const nextStat = () => {
             currentIndex = (currentIndex + 1) % statCards.length;
             showStat(currentIndex);
+            
+            // Mark counters as animated after first cycle
+            if (currentIndex === 0) {
+                hasAnimatedCounters = true;
+            }
         };
 
         const startCarousel = () => {
-            intervalId = setInterval(nextStat, 3000);
+            intervalId = setInterval(nextStat, 3500);
         };
 
         const stopCarousel = () => {
@@ -119,7 +152,11 @@ class OACSSite {
 
         // Initialize
         showStat(0);
-        startCarousel();
+        
+        // Start carousel after a short delay to show first stat
+        setTimeout(() => {
+            startCarousel();
+        }, 2000);
 
         // Pause on hover
         const carouselContainer = document.querySelector('.stat-carousel');
@@ -180,15 +217,18 @@ class OACSSite {
     // Smooth Scroll for Anchor Links
     setupSmoothScroll() {
         const links = document.querySelectorAll('a[href^="#"]');
+        const header = document.getElementById('header');
         
         links.forEach(link => {
             link.addEventListener('click', (e) => {
+                const href = link.getAttribute('href');
+                if (!href || href === '#') return;
                 e.preventDefault();
-                const targetId = link.getAttribute('href').substring(1);
+                const targetId = href.substring(1);
                 const targetElement = document.getElementById(targetId);
                 
                 if (targetElement) {
-                    const headerHeight = document.getElementById('header').offsetHeight;
+                    const headerHeight = header ? header.offsetHeight : 0;
                     const targetPosition = targetElement.offsetTop - headerHeight - 20;
                     
                     window.scrollTo({
@@ -198,6 +238,12 @@ class OACSSite {
                 }
             });
         });
+    }
+
+    // Counter Animation for Stats (handled by carousel now)
+    setupCounterAnimation() {
+        // Counter animation is now integrated into the carousel
+        // This method is kept for compatibility but does nothing
     }
 
     // Form Handling
@@ -322,7 +368,7 @@ document.addEventListener('visibilitychange', () => {
 // Performance optimization: Preload critical resources
 const preloadCriticalResources = () => {
     const criticalImages = [
-        'file:///home/beto/Documents/Outre Atlantique/Logo OACS.png'
+        'assets/images/Logo OACS.png'
     ];
     
     criticalImages.forEach(src => {
@@ -330,7 +376,7 @@ const preloadCriticalResources = () => {
         link.rel = 'preload';
         link.as = 'image';
         link.href = src;
-        document.head.appendChild(link);
+        document.head && document.head.appendChild(link);
     });
 };
 
