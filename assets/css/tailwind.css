@@ -163,10 +163,11 @@
 /* 📱 Mobile Portrait (320px - 480px) */
 @media (min-width: 320px) and (max-width: 480px) {
   /* Typography */
-  h1 { font-size: 1.875rem !important; line-height: 2.25rem !important; } /* 30px */
-  h2 { font-size: 1.5rem !important; line-height: 2rem !important; } /* 24px */
-  h3 { font-size: 1.25rem !important; line-height: 1.75rem !important; } /* 20px */
-  p { font-size: 0.875rem !important; line-height: 1.5rem !important; } /* 14px */
+  h1, .text-4xl, .text-5xl, .text-6xl { font-size: 1.875rem !important; line-height: 2.25rem !important; } /* 30px */
+  h2, .text-3xl, .text-4xl { font-size: 1.5rem !important; line-height: 2rem !important; } /* 24px */
+  h3, .text-2xl, .text-3xl { font-size: 1.25rem !important; line-height: 1.75rem !important; } /* 20px */
+  p, .text-xl, .text-lg { font-size: 0.875rem !important; line-height: 1.5rem !important; } /* 14px */
+  .text-base { font-size: 0.875rem !important; line-height: 1.5rem !important; } /* 14px */
   
   /* Container */
   .max-w-7xl { padding-left: 1rem !important; padding-right: 1rem !important; }
@@ -198,9 +199,10 @@
 /* 📱 Mobile Landscape (481px - 767px) */
 @media (min-width: 481px) and (max-width: 767px) {
   /* Typography */
-  h1 { font-size: 2.25rem !important; line-height: 2.5rem !important; } /* 36px */
-  h2 { font-size: 1.875rem !important; line-height: 2.25rem !important; } /* 30px */
-  h3 { font-size: 1.5rem !important; line-height: 2rem !important; } /* 24px */
+  h1, .text-4xl, .text-5xl, .text-6xl { font-size: 2.25rem !important; line-height: 2.5rem !important; } /* 36px */
+  h2, .text-3xl, .text-4xl { font-size: 1.875rem !important; line-height: 2.25rem !important; } /* 30px */
+  h3, .text-2xl, .text-3xl { font-size: 1.5rem !important; line-height: 2rem !important; } /* 24px */
+  p, .text-xl, .text-lg { font-size: 1rem !important; line-height: 1.75rem !important; } /* 16px */
   
   /* Container */
   .max-w-7xl { padding-left: 1.5rem !important; padding-right: 1.5rem !important; }
@@ -221,9 +223,10 @@
 /* 📱 Tablet Portrait (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
   /* Typography */
-  h1 { font-size: 3rem !important; line-height: 1.2 !important; } /* 48px */
-  h2 { font-size: 2.25rem !important; line-height: 2.5rem !important; } /* 36px */
-  h3 { font-size: 1.875rem !important; line-height: 2.25rem !important; } /* 30px */
+  h1, .text-5xl, .text-6xl { font-size: 3rem !important; line-height: 1.2 !important; } /* 48px */
+  h2, .text-4xl { font-size: 2.25rem !important; line-height: 2.5rem !important; } /* 36px */
+  h3, .text-2xl, .text-3xl { font-size: 1.875rem !important; line-height: 2.25rem !important; } /* 30px */
+  p, .text-xl { font-size: 1.125rem !important; line-height: 1.75rem !important; } /* 18px */
   
   /* Container */
   .max-w-7xl { padding-left: 2rem !important; padding-right: 2rem !important; }
@@ -251,8 +254,10 @@
 /* 📱 Tablet Landscape (768px - 1024px) */
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
   /* Typography */
-  h1 { font-size: 3.5rem !important; } /* 56px */
-  h2 { font-size: 2.5rem !important; } /* 40px */
+  h1, .text-5xl, .text-6xl { font-size: 3.5rem !important; } /* 56px */
+  h2, .text-4xl { font-size: 2.5rem !important; } /* 40px */
+  h3, .text-2xl, .text-3xl { font-size: 2rem !important; } /* 32px */
+  p, .text-xl { font-size: 1.125rem !important; } /* 18px */
   
   /* Cards */
   .card-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 1.5rem !important; }
@@ -270,9 +275,11 @@
 /* 💻 Laptop/Desktop (1025px - 1280px) */
 @media (min-width: 1025px) and (max-width: 1280px) {
   /* Typography */
-  h1 { font-size: 3.75rem !important; line-height: 1.1 !important; } /* 60px */
-  h2 { font-size: 2.5rem !important; } /* 40px */
-  h3 { font-size: 2rem !important; } /* 32px */
+  h1, .text-6xl { font-size: 3.75rem !important; line-height: 1.1 !important; } /* 60px */
+  h2, .text-4xl, .text-5xl { font-size: 2.5rem !important; } /* 40px */
+  h3, .text-2xl, .text-3xl { font-size: 2rem !important; } /* 32px */
+  p, .text-xl { font-size: 1.125rem !important; } /* 18px */
+  .text-lg { font-size: 1.125rem !important; } /* 18px */
   
   /* Container */
   .max-w-7xl { max-width: 1200px !important; padding-left: 2rem !important; padding-right: 2rem !important; }
@@ -298,9 +305,11 @@
 /* 🖥️ Large Desktop (1281px+) */
 @media (min-width: 1281px) {
   /* Typography */
-  h1 { font-size: 4rem !important; line-height: 1.1 !important; } /* 64px */
-  h2 { font-size: 3rem !important; } /* 48px */
-  h3 { font-size: 2.25rem !important; } /* 36px */
+  h1, .text-6xl { font-size: 4rem !important; line-height: 1.1 !important; } /* 64px */
+  h2, .text-4xl, .text-5xl { font-size: 3rem !important; } /* 48px */
+  h3, .text-2xl, .text-3xl { font-size: 2.25rem !important; } /* 36px */
+  p, .text-xl { font-size: 1.25rem !important; } /* 20px */
+  .text-lg { font-size: 1.125rem !important; } /* 18px */
   
   /* Container */
   .max-w-7xl { max-width: 1280px !important; }
